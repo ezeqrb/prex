@@ -10,7 +10,7 @@ const formSchema = z.object({
   password: z.string().min(6).max(100),
 });
 
-export async function loginAction(prevState: any, formData: any) {
+export async function uploadAction(prevState: any, formData: any) {
 
   const url = `http://localhost:3000/api/auth/login`;
 
@@ -27,7 +27,7 @@ export async function loginAction(prevState: any, formData: any) {
   }
 
   const { identifier, password } = validatedFields.data;
-  console.log("🚀 ~ loginAction ~ identifier, password:", identifier, password)
+
   try {
     const response: any = await fetch(url, {
       method: "POST",

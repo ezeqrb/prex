@@ -11,6 +11,6 @@ export type Role = 'ADMIN' | 'USER'
 export type File = {
   id: string;
   name: string;
-  type: string;
-  sharedTo: number;
+  owner: number;
+  sharedTo?: number;
 };

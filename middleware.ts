@@ -19,6 +19,9 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
+  if(currentPath === '/files/upload') {
+
+  }
   
   return NextResponse.next()
 }
